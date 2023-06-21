@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+:root {
+    --primary-radius: 0.65rem;
+    --secondary-radius: 0.25rem;
+
+    --native-white: #F1F6F9;
+    --pitch-black: #000000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    -o-object-fit: contain;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--native-white);
+    color: var(--pitch-black);
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'DM Sans', sans-serif;
+}
