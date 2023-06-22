@@ -8,6 +8,76 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
+        <main>
+            <h1 class="title">Expense Tracker</h1>
+
+            <div class="balance-info">
+                <text class="balance-title">Your balance</text>
+                <text class="current-balance" id="current-balance"></text>
+            </div>
+
+            <div class="statement-container">
+                <div class="income">
+                    <text class="income-title">income</text>
+                    <text class="income-amount" id="income-amount"></text>
+                </div>
+                <div class="expense">
+                    <text class="expense-title">expense</text>
+                    <text class="expense-amount" id="expense-amount"></text>
+                </div>
+            </div>
+
+            <div class="transaction-history">
+                <h3 class="history-title">History</h3>
+
+                <div class="transactions-container" id="transactions-container">
+                    <!-- <div class="transaction">
+                        <button class="delete-button">
+                            <img class="delete-icon" src="./media/remove.png" alt="">
+                        </button>
+
+                        <div class="transaction-text">
+                            <text class="transaction-name">Groceries</text>
+                            <text class="transaction-amount">-50</text>
+                        </div>
+
+                        <button class="edit-button">
+                            <img class="edit-icon" src="./media/edit.png" alt="">
+                        </button>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="transaction-input-form">
+                <h3 class="transaction-form-title">Add New Transaction</h3>
+
+                <form action="" class="input-form" id="input-form">
+                    <div class="transaction-name-input-box">
+                        <label for="transaction-name-input">Title</label>
+                        <input type="text" class="transaction-name-input" id="transaction-name-input" required>
+                    </div>
+
+                    <div class="transaction-amount-input-box">
+                        <label for="transaction-amount-input">Amount</label>
+                        <input type="number" class="transaction-amount-input" id="transaction-amount-input" required>
+                    </div>
+
+                    <div class="transaction-type-box">
+                        <div class="radio-input">
+                            <input type="radio" name="transaction-type" id="transaction-type-income" value="income" required>
+                            <label for="transaction-type-income">Income</label>
+                        </div>
+                        
+                        <div class="radio-input">
+                            <input type="radio" name="transaction-type" id="transaction-type-expense" value="expense" required>
+                            <label for="transaction-type-expense">Expense</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-button" id="submit-button">Add Transaction</button>
+                </form>
+            </div>
+        </main>
         <script src="./script.js"></script>
     </body>
 </html>

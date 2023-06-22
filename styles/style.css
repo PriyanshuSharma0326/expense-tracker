@@ -15,7 +15,13 @@ html {
     --secondary-radius: 0.25rem;
 
     --native-white: #F1F6F9;
+    --true-white: #FFFFFF;
     --pitch-black: #000000;
+
+    --gray: #9DB2BF;
+    --lavender: #9376E0;
+    --green: #03C988;
+    --not-red: #FF0060;
 }
 
 img {
@@ -26,12 +32,232 @@ img {
 }
 
 body {
-    width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
-    background-color: var(--native-white);
+    background-color: var(--lavender);
     color: var(--pitch-black);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     font-family: 'DM Sans', sans-serif;
+}
+
+main {
+    width: 22rem;
+    border-radius: 0.5rem;
+    background-color: var(--true-white);
+    padding: 1.15rem;
+    margin: 4rem 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    box-shadow: 0px 8px 24px rgb(0, 0, 0, 30%);
+}
+
+.title {
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.balance-info {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.balance-title {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.current-balance {
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+.statement-container {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 12px rgb(0, 0, 0, 24%);
+}
+
+.income, .expense {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 0.5;
+}
+
+.income {
+    border-right: 1px solid var(--gray);
+}
+
+.income-title, .expense-title {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.income-amount, .expense-amount {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.income-amount, .positive {
+    color: var(--green);
+}
+
+.expense-amount, .negative {
+    color: var(--not-red);
+}
+
+.transaction-history {
+    display: flex;
+    flex-direction: column;
+}
+
+.history-title, .transaction-form-title {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 0.5rem;
+}
+
+.transactions-container {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.transaction {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transaction:hover .transaction-text{
+    width: 78%;
+}
+
+.transaction-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 12px rgb(0, 0, 0, 18%);
+}
+
+.transaction-text:hover {
+    cursor: pointer;
+}
+
+.transaction:hover .delete-button, .transaction:hover .edit-button {
+    display: block;
+}
+
+.transaction-name, .transaction-amount {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.transaction-name {
+    margin-right: auto;
+}
+
+.transaction-amount {
+    margin-left: auto;
+}
+
+.delete-button {
+    display: none;
+    padding: 0 0.15rem;
+    outline: none;
+    border: none;
+    background-color: var(--true-white);
+    line-height: 0;
+    cursor: pointer;
+}
+
+.edit-button {
+    display: none;
+    outline: none;
+    border: none;
+    background-color: var(--true-white);
+    line-height: 0;
+    cursor: pointer;
+}
+
+.input-form {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 12px rgb(0, 0, 0, 18%);
+}
+
+.transaction-name-input-box, .transaction-amount-input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.transaction-name-input, .transaction-amount-input {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--gray);
+    outline: none;
+}
+
+.transaction-type-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.radio-input {
+    display: flex;
+    gap: 0.5rem;
+
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.submit-button {
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    background-color: var(--lavender);
+    color: var(--true-white);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
