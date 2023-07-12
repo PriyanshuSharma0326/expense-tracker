@@ -1,6 +1,6 @@
 # EXPENSE TRACKER
 
-![Design preview for Expense Tracker](./design/desktop-design.jpg)
+![Design preview for Expense Tracker](./design/desktop-design.png)
 
 ## Welcome! 👋
 
